@@ -13,3 +13,15 @@ end
 get '/visit' do
 	erb :visit
 end
+
+post '/visit' do
+
+
+	@username = params[:username]
+	@phone = params[:phone]
+	@datetime = params[:datetime]
+	@barbername = params[:barbername]
+
+	erb "OK!, username is #{@username}, #{@phone}, #{@datetime}, #{@barbername}"
+
+end
