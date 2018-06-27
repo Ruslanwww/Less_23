@@ -21,7 +21,8 @@ post '/visit' do
 	@phone = params[:phone]
 	@datetime = params[:datetime]
 	@barbername = params[:barbername]
+	@color = params[:colorpicker_regularfont]
 
-	erb "OK!, username is #{@username}, #{@phone}, #{@datetime}, #{@barbername}"
+	erb "OK!, username is #{@username}, #{@phone}, #{@datetime}, #{@barbername}, #{@color}"
 
 end
