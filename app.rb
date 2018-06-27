@@ -23,6 +23,11 @@ post '/visit' do
 	@barbername = params[:barbername]
 	@color = params[:colorpicker_regularfont]
 
+	if @username == ''
+		@error = 'Введите имя'
+		return erb :visit
+	end
+
 	erb "OK!, username is #{@username}, #{@phone}, #{@datetime}, #{@barbername}, #{@color}"
 
 end
