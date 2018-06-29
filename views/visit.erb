@@ -21,12 +21,12 @@
   <div class="form-group">
     <label>Выберите парикмаера</label>
     <select name="barbername" class="form-control">
-      <option>Не важно</option>
-      <option>Jess</option>
-      <option>Mike</option>
-      <option>Mia</option>
-      <option>Jared</option>
-      <option>Megan</option>
+      <option <%= @barbername == 'Не важно' ? 'selected' : '' %>>Не важно</option>
+      <option <%= @barbername == 'Jess' ? 'selected' : '' %>>Jess</option>
+      <option <%= @barbername == 'Mike' ? 'selected' : '' %>>Mike</option>
+      <option <%= @barbername == 'Mia' ? 'selected' : '' %>>Mia</option>
+      <option <%= @barbername == 'Jared' ? 'selected' : '' %>>Jared</option>
+      <option <%= @barbername == 'Megan' ? 'selected' : '' %>>Megan</option>
     </select>
   </div>
 
