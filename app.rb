@@ -74,11 +74,10 @@ post '/visit' do
 end
 
 get '/showusers' do
-	# db = get_db
-	# db.results_as_hash = true
+	db = get_db
 
- #  	db.execute 'SELECT * FROM Users' do |row|
- #  		puts row['username']
- #  	end
+	@results = db.execute 'select * from Users order by id desc'
+	erb :showusers
+
 end
 
