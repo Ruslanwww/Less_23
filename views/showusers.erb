@@ -1,15 +1,18 @@
-<table class="table">
+<table class="table table-bordered table-hover">
 
-	<tr>
-		<td>Username</td>
-		<td>Phone</td>
-		<td>Datestamp</td>
-		<td>Barbername</td>
-		<td>Color</td>
-	</tr>
+	<thead>
+		<tr class="info">
+			<th><b>Username</b></th>
+			<th><b>Phone</b></th>
+			<th><b>Datestamp</b></th>
+			<th><b>Barbername</b></th>
+			<th><b>Color</b></th>
+		</tr>
+	</thead>
 	
 	<% @results.each do |row| %>
 
+	<tbody>
 		<tr>
 			<td><%= row['username'] %></td>
 			<td><%= row['phone'] %></td>
@@ -17,6 +20,7 @@
 			<td><%= row['barbername'] %></td>
 			<td><%= row['color'] %></td>
 		</tr>
+	</tbody>
 
 	<% end %>
 
