@@ -21,12 +21,10 @@
   <div class="form-group">
     <label>Выберите парикмаера</label>
     <select name="barbername" class="form-control">
-      <option <%= @barbername == 'Не важно' ? 'selected' : '' %>>Не важно</option>
-      <option <%= @barbername == 'Jess' ? 'selected' : '' %>>Jess</option>
-      <option <%= @barbername == 'Mike' ? 'selected' : '' %>>Mike</option>
-      <option <%= @barbername == 'Mia' ? 'selected' : '' %>>Mia</option>
-      <option <%= @barbername == 'Jared' ? 'selected' : '' %>>Jared</option>
-      <option <%= @barbername == 'Megan' ? 'selected' : '' %>>Megan</option>
+
+      <% @barbers.each do |item| %>
+        <option <%= @barbername == item['name'] ? 'selected' : '' %>><%= item['name'] %></option>
+      <% end %>
     </select>
   </div>
 
